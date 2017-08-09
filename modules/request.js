@@ -106,9 +106,9 @@ class Request {
       .proxy(APROXY_CONF['uri'])
       .type('form')
       // 超时
-      .timeout(opts.timeout || REQ_TIMEOUT)
+      // .timeout(opts.timeout || REQ_TIMEOUT)
       // 忽略HTTPS
-      .ignoreHTTPS(opts['ignoreHTTPS'])
+      // .ignoreHTTPS(opts['ignoreHTTPS'])
       .send(_postData)
       .parse((res, callback) => {
         this.parse(opts['tag_s'], opts['tag_e'], (chunk) => {
